@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -8,51 +8,54 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="../static/css/style.css" />
-    <title>Portfolio</title>
+    <title>Portfólio</title>
   </head>
   <body>
     <header class="header">
       <nav class="header__nav main-nav">
         <ul class="main-nav__list main-list">
           <li class="main-list__item list-item">
-            <a class="list-item__link" href="#home">HOME</a>
+            <a class="list-item__link" href="#home">INÍCIO</a>
           </li>
           <li class="main-list__item list-item">
-            <a class="list-item__link" href="#about">ABOUT</a>
+            <a class="list-item__link" href="#about">SOBRE</a>
           </li>
           <li class="main-list__item list-item">
-            <a class="list-item__link" href="#skills">MY SKILLS</a>
+            <a class="list-item__link" href="#skills">MINHAS HABILIDADES</a>
           </li>
         </ul>
       </nav>
     </header>
+
     <main class="main">
-      <!-- Preview section -->
+      <!-- Seção inicial -->
       <section class="main__home home" id="home">
-        <h1 class="home__title">NAME SURNAME</h1>
-        <p class="home__subtitle">WEB-DEVELOPER, PYTHON PROGRAMMER</p>
+        <h1 class="home__title">NOME SOBRENOME</h1>
+        <p class="home__subtitle">DESENVOLVEDOR WEB, PROGRAMADOR PYTHON</p>
       </section>
-      <!-- About me section -->
+
+      <!-- Seção sobre mim -->
       <section class="main__about about" id="about">
-        <h2 class="about__title">ABOUT ME</h2>
+        <h2 class="about__title">SOBRE MIM</h2>
         <div class="about__info info-block">
           <p class="info-block__text">
-            Inform about me Inform about me Inform about me Inform about me
-            Inform about me Inform about me Inform about me Inform about me
-            Inform about me
+            Informações sobre mim. Informações sobre mim. Informações sobre mim.
+            Informações sobre mim. Informações sobre mim. Informações sobre mim.
+            Informações sobre mim. Informações sobre mim. Informações sobre mim.
           </p>
           <img
             class="info-block__img"
             src="../static/img/profile.png"
-            alt="me"
+            alt="foto minha"
             width="250"
             height="250"
           />
         </div>
       </section>
-      <!-- Skills section -->
+
+      <!-- Seção de habilidades -->
       <section class="main__skills skills" id="skills">
-        <h2 class="skills__title">MY SKILLS</h2>
+        <h2 class="skills__title">MINHAS HABILIDADES</h2>
         <form action="/" method="POST">
           <ul class="skills__list skills-list">
             <li class="skills-list__skill skill">
@@ -63,9 +66,15 @@
                 width="150"
                 height="150"
               />
-              <span class="skill__info">Skill info</span>
-              <input class="skill__button" type="submit" name="button_python" value="SHOW PROJECT">
+              <span class="skill__info">Informações da habilidade</span>
+              <input
+                class="skill__button"
+                type="submit"
+                name="button_python"
+                value="VER PROJETO"
+              />
             </li>
+
             <li class="skills-list__skill skill">
               <img
                 class="skill__img"
@@ -74,9 +83,15 @@
                 width="150"
                 height="150"
               />
-              <span class="skill__info">Skill info</span>
-              <input class="skill__button" type="submit" name="button_discord" value="SHOW PROJECT">
+              <span class="skill__info">Informações da habilidade</span>
+              <input
+                class="skill__button"
+                type="submit"
+                name="button_discord"
+                value="VER PROJETO"
+              />
             </li>
+
             <li class="skills-list__skill skill">
               <img
                 class="skill__img"
@@ -85,9 +100,15 @@
                 width="150"
                 height="150"
               />
-              <span class="skill__info">Skill info</span>
-              <input class="skill__button" type="submit" name="button_html" value="SHOW PROJECT">
+              <span class="skill__info">Informações da habilidade</span>
+              <input
+                class="skill__button"
+                type="submit"
+                name="button_html"
+                value="VER PROJETO"
+              />
             </li>
+
             <li class="skills-list__skill skill">
               <img
                 class="skill__img"
@@ -96,35 +117,64 @@
                 width="150"
                 height="150"
               />
-              <span class="skill__info">Skill info</span>
-              <input class="skill__button" type="submit" name="button_db" value="SHOW PROJECT">
+              <span class="skill__info">Informações da habilidade</span>
+              <input
+                class="skill__button"
+                type="submit"
+                name="button_db"
+                value="VER PROJETO"
+              />
             </li>
           </ul>
         </form>
-        {% if button_python%}
-          <div class="skills__project project" id="project">
-              <img class="project__img" src="../static/img/python-project.png" alt="project" width="500">
-              <a class="project__link" href="">Open on GitHub</a>
-          </div>
+
+        {% if button_python %}
+        <div class="skills__project project" id="project">
+          <img
+            class="project__img"
+            src="../static/img/python-project.png"
+            alt="projeto"
+            width="500"
+          />
+          <a class="project__link" href="">Abrir no GitHub</a>
+        </div>
         {% endif %}
       </section>
-      <!-- Feedback form -->
+
+      <!-- Formulário de feedback -->
       <section class="main__feedback feedback" id="feedback">
         <h2 class="feedback__title">FEEDBACK</h2>
         <form action="" method="POST" class="feedback__form form">
           <label for="email">
-            <input type="email" class="form__input" name="email" id="email" placeholder="Введите E-mail" required>
+            <input
+              type="email"
+              class="form__input"
+              name="email"
+              id="email"
+              placeholder="Digite seu e-mail"
+              required
+            />
           </label>
+
           <label for="text">
-            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="Comment"></textarea>
+            <textarea
+              name="text"
+              class="form__input"
+              id="text"
+              cols="70"
+              rows="10"
+              required
+              placeholder="Comentário"
+            ></textarea>
           </label>
-          <button class="form__button" type="submit">SEND</button>
+
+          <button class="form__button" type="submit">ENVIAR</button>
         </form>
       </section>
     </main>
-    <!-- A footer for social media links -->
-    <footer>
 
-    </footer>
+    <!-- Rodapé para links de redes sociais -->
+    <footer></footer>
   </body>
 </html>
+
