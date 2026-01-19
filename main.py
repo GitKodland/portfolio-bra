@@ -1,17 +1,17 @@
-# Import
+# Importar
 from flask import Flask, render_template,request, redirect
 
 
 
 app = Flask(__name__)
 
-# Running content page
+# Conteúdo da página
 @app.route('/')
 def index():
     return render_template('index.html')
 
 
-# Dynamic skills
+# Habilidades Dinâmicas
 @app.route('/', methods=['POST'])
 def process_form():
     button_python = request.form.get('button_python')
